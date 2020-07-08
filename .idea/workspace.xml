@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c809726-12a6-48f7-9211-4dcc5c9b1fab" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cCrF4oH7klSIIvXehqzbsZlw0E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c809726-12a6-48f7-9211-4dcc5c9b1fab" name="Default Changelist" comment="" />
+      <created>1590043309783</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590043309783</updated>
+      <workItem from="1590043311193" duration="82484000" />
+      <workItem from="1590562106063" duration="504000" />
+      <workItem from="1590687526648" duration="59609000" />
+      <workItem from="1590905424378" duration="10023000" />
+      <workItem from="1590945946878" duration="25372000" />
+      <workItem from="1591033894214" duration="448000" />
+      <workItem from="1591034797150" duration="3318000" />
+      <workItem from="1591038449509" duration="1479000" />
+      <workItem from="1591292641637" duration="35026000" />
+      <workItem from="1591391217368" duration="33653000" />
+      <workItem from="1591646318558" duration="15711000" />
+      <workItem from="1591723551363" duration="450000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591531098108">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="458" y="175" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.797@0.23.1440.797" timestamp="1591531098108" />
+    <state width="600" height="440" key="javadoc.popup" timestamp="1590755989319">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="600" height="440" key="javadoc.popup/0.23.1440.797@0.23.1440.797" timestamp="1590755989319" />
+    <state x="482" y="41" key="refactoring.ChangeSignatureDialog" timestamp="1591454297541">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="482" y="41" key="refactoring.ChangeSignatureDialog/0.23.1440.797@0.23.1440.797" timestamp="1591454297541" />
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup" timestamp="1591337202100">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="385" y="191" width="670" height="675" key="run.anything.popup/0.23.1440.797@0.23.1440.797" timestamp="1591337202100" />
+  </component>
+</project>

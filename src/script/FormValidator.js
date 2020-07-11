@@ -15,7 +15,7 @@
 //     setEventListeners, чтобы добавлять обработчики. Добавляет необходимые для валидации обработчики всем полям формы.
 
 
-class FormValidator {
+export default class FormValidator {
     constructor(element, errorMessages) {
         this.element = element;
         this.errorMessages = errorMessages;

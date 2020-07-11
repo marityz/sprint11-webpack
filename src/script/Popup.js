@@ -8,7 +8,7 @@
 
 //onOpenCallback
 
-class Popup {
+ export default class Popup {
     constructor(modalWindow, closePopupButton, openPopupButton = null, onOpenCallback) {
         this.modalWindow = modalWindow;
         this.openPopupButton = openPopupButton;

@@ -1,7 +1,7 @@
 {
-  "name": "0.0.1",
+  "name": "Mesto",
   "version": "0.0.1",
-  "description": "",
+  "description": "Test project for webpack practice",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",

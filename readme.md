@@ -7,13 +7,8 @@
 1. Для скачивания файла в Терминале запустите команду git clone https://github.com/marityz/sprint11-webpack.git 
 2. Для начала нужно проверить на месте ли NPM? 
  Введите команду в терминале npm -v и если увидите версию, то можно совешать последующие шаги
-3. Для настройки окружения и установки зависимостей поочередно введите в Терминале команды:
-    - npm i webpack webpack-cli webpack-dev-server --save-dev
-    - npm i mini-css-extract-plugin html-webpack-plugin webpack-md5-hash -D
-    - npm i css-loader file-loader image-webpack-loader style-loader --save-dev
-    - npm i babel-loader @babel/cli @babel/core @babel/preset-env --save-dev
-    - npm i autoprefixer cssnano postcss-loader --save-dev
-    - npm i core-js@3.4.1 babel-polyfill --save
+3. Для настройки окружения и установки зависимостей в Терминале команду введите:
+    - npm install
 4. Для сборки dev:
     - npm run dev
 5. Для сборки prod:

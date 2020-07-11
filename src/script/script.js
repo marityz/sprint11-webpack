@@ -1,5 +1,5 @@
 
-
+import "./../pages/index.css";
 import Api from  "./Api.js";
 import Card from "./Card";
 import CardList from "./CardList";
@@ -9,7 +9,7 @@ import FormValidator from "./FormValidator";
 import Popup from "./Popup";
 import PopupImage from "./PopupImage";
 import UserInfo from "./UserInfo";
-import "../pages/index.css";
+
 
 (function () {
 

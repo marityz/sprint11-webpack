@@ -33,6 +33,17 @@ module.exports = {
             },
 
             {
+                test: /\.css$/i,
+                use: [
+                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    'css-loader',
+                    'postcss-loader'
+                ],
+
+
+            },
+
+            {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
                     'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
@@ -53,21 +64,21 @@ module.exports = {
 
                 ]
             },
-            {
-                test: /\.css$/i,
-                use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
 
-                    'css-loader',
-                    'postcss-loader',
-                ],
-
-            },
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css'
+        }),
+
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                preset: ['default'],
+            },
+            canPrint: true
         }),
 
 
@@ -83,14 +94,7 @@ module.exports = {
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
 
-        new OptimizeCssAssetsPlugin({
-            assetNameRegExp: /\.css$/g,
-            cssProcessor: require('cssnano'),
-            cssProcessorPluginOptions: {
-                preset: ['default'],
-            },
-            canPrint: true
-        })
+
 
     ]
 };

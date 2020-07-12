@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css">
+    <title>Место</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
 <div class="root">
     <header class="header root__section">
-        <img src="./images/logo.svg" alt="mesto logo" class="logo">
+        <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
         <div class="user-info">
@@ -44,7 +44,7 @@
 
     <div class="popup popup-avatar">
         <div class="popup__content">
-            <img src="./images/close.svg" alt="" class="popup__close">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
             <h3 class="popup__title">Обновить аватар</h3>
             <form class="popup__form" name="avatar">
                 <input type="url" name="link" id="linkavatar" class="popup__input popup__input_type_link-url"
@@ -57,7 +57,7 @@
 
     <div class="popup popup-placecard">
         <div class="popup__content">
-            <img src="./images/close.svg" alt="" class="popup__close">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
             <h3 class="popup__title">Новое место</h3>
             <form class="popup__form" name="new">
                 <input type="text" name="name" minlength="2" maxlength="30" id="name"
@@ -75,7 +75,7 @@
 
     <div class="popup popup-profile">
         <div class="popup__content">
-            <img src="./images/close.svg" alt="" class="popup__close">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
             <h3 class="popup__title">Редактировать профиль</h3>
             <form class="popup__form" name="profile">
                 <input type="text" name="name" minlength="2" maxlength="30"  id="nameprofile"
@@ -93,18 +93,9 @@
 
     <div class="popup popup-image">
         <img class="popup__img" src="" alt="Просто картинка">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
     </div>
 </div>
-<script src="script/Api.js"></script>
-<script src="script/FormPopup.js"></script>
-<script src="script/FormUserInfo.js"></script>
-<script src="script/Popup.js"></script>
-<script src="script/PopupImage.js"></script>
-<script src="script/Card.js"></script>
-<script src="script/CardList.js"></script>
-<script src="script/UserInfo.js"></script>
-<script src="script/FormValidator.js"></script>
-<script src="script/script.js"></script>
+<script  src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

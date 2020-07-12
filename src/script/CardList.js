@@ -7,7 +7,7 @@
 // -render для отрисовки карточек при загрузке страницы.
 
 
-class CardList {
+ export default class CardList {
   constructor(container) {
     this.container = container;
   }

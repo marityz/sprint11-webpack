@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
 
 
   constructor(data) {
@@ -103,3 +103,4 @@ class Api {
 
 
 }
+

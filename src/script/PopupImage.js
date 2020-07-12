@@ -1,6 +1,6 @@
-//работа с попап картинка
+import Popup from "./Popup";
 
-class PopupImage extends Popup {
+export default class PopupImage extends Popup {
     constructor(modalWindow, closePopupButton) {
         super(modalWindow, closePopupButton);
     }

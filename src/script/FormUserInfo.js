@@ -1,7 +1,7 @@
-class FormUserInfo extends formPopup {
-    constructor(...args) {
-        super(...args);
-    }
+ import FormPopup from "./FormPopup";
+
+ export default class FormUserInfo extends FormPopup{
+
 
     setUserInfoForm = (name, job) => {
         this.name = this.form.elements.name;
@@ -12,3 +12,7 @@ class FormUserInfo extends formPopup {
 
 
 }
+
+
+
+

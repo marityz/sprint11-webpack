@@ -1,4 +1,8 @@
-class formPopup {
+
+
+
+ export  default  class FormPopup{
+
     constructor(form, textLoading) {
         this.form = form;
         this.textLoading = textLoading;

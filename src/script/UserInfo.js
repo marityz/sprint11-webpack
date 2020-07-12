@@ -5,7 +5,7 @@
 //     setUserInfo, чтобы обновлять данные внутри экземпляра класса;
 //     updateUserInfo, чтобы отображать эти данные на странице.
 
-class UserInfo {
+export default class UserInfo {
     constructor(userInfoName, userInfoJob) {
         this.userInfoName = userInfoName; //поле имя в html
         this.userInfoJob = userInfoJob; // поле инфо в html

@@ -1,4 +1,19 @@
+
+import "./../pages/index.css";
+import Api from  "./Api.js";
+import Card from "./Card";
+import CardList from "./CardList";
+import FormUserInfo from "./FormUserInfo";
+import FormPopup from "./FormPopup";
+import FormValidator from "./FormValidator";
+import Popup from "./Popup";
+import PopupImage from "./PopupImage";
+import UserInfo from "./UserInfo";
+
+
 (function () {
+
+
   const errorMessages = {
     empty: 'Это обязательное поле',
     wrongLength: 'Должно быть от 2 до 30 символов',
@@ -7,32 +22,27 @@
   const originalText = "Вы уверены, что хотите безвозвратно удалить карту?";
   const textLoading = "Загрузка...";
 
-  const placeList = document.querySelector('.places-list'); // первичный контейнер
+  const placeList = document.querySelector('.places-list');
   const templateCard = document.querySelector('#card').content;
 
-  // попап image
   const popupBlockImage = document.querySelector('.popup-image');
   const closedPopupBlockImageButton = popupBlockImage.querySelector('.popup__close');
 
-  // попап card
   const popupPlaceCard = document.querySelector('.popup-placecard');
   const openPopupPlaceCardButton = document.querySelector('.user-info__button');
   const closedPopupPlaceCardButton = popupPlaceCard.querySelector('.popup__close');
   const formPlaceCard = document.forms.new;
 
-  // попап profile
   const popupProfile = document.querySelector('.popup-profile');
   const openPopupProfileButton = document.querySelector('.user-info__button-edit');
   const closedPopupProfileButton = popupProfile.querySelector('.popup__close');
   const formProfile = document.forms.profile;
 
-  // попап avatar
   const popupAvatar = document.querySelector('.popup-avatar');
   const openPopupAvatar = document.querySelector('.user-info__photo');
   const closePopupAvatar = popupAvatar.querySelector('.popup__close');
   const formAvatar = document.forms.avatar;
 
-  // валидация трех попапов
   const formAvatarValidator = new FormValidator(formAvatar, errorMessages);
   const formProfileValidator = new FormValidator(formProfile, errorMessages);
   const formPlaceCardValidator = new FormValidator(formPlaceCard, errorMessages);
@@ -49,10 +59,10 @@
   const changeProfileInfo = new FormUserInfo(formProfile, textLoading);
 
   const addCard = new CardList(placeList);
-
+  const API_URL = NODE_ENV === 'production' ? 'https://praktikum.tk/cohort11/' : 'http://praktikum.tk/cohort11/';
 
   const defaultDataApi = {
-    url: 'https://praktikum.tk/cohort11/',
+    url: API_URL,
     headers: {
       authorization: 'f78f8d75-bb2d-4052-ab1f-ca652509c73f',
       "Content-Type": "application/json; charset=UTF-8"
@@ -101,14 +111,12 @@
       });
   }
 
-  // запрашиваем данные с сервера о пользователи, после
   api.getInfo()
     .then((res) => {
       openPopupAvatar.style.backgroundImage = "url(" + res.avatar + ")";
       changeInfo.setUserInfo(res.name, res.about, res._id);
       changeInfo.updateUserInfo();
     })
-    // как только id точно записано, отрисовываем  карточки
 
     .then(() => getCards())
 
@@ -132,10 +140,9 @@
   popupAddCard.setEventListeners();
 
 
-  const formPopupAddCard = new formPopup(formPlaceCard, textLoading);
+  const formPopupAddCard = new FormPopup(formPlaceCard, textLoading);
 
 
-  // добавление новой карты
   formPopupAddCard.setEventListener((event) => {
     event.preventDefault();
     formPopupAddCard.renderLoading(true);
@@ -199,7 +206,7 @@
     });
   popupChangeAvatar.setEventListeners();
 
-  const formPopupAvatar = new formPopup(formAvatar, textLoading);
+  const formPopupAvatar = new FormPopup(formAvatar, textLoading);
 
 
   formPopupAvatar.setEventListener((event) => {
@@ -221,34 +228,3 @@
 
 
 })();
-
-// Здравствуйте!
-// Сильная работа, хороший и чистый код, сплошное удовольствие!
-
-// ## Итог
-
-// - класс Api реализован согласно поставленной задаче
-// - информация о пользователе  (имя, подпись и аватар) подгружаются с сервера (GET запрос)
-// - имя и о себе можно отредактировать (отправляется PATCH запрос, новые данные)
-// - карточки подгружаются с сервера (GET запрос)
-// - обязательный функционал работает без багов
-// - корректная работа с асинхронным кодом
-// - DOM изменяется только после того, как запрос успешно выполнен
-// - ошибки сервера обрабатываются
-// - сделаны дополнительные задания!!!!
-
-// Работа принята
-
-// ## Можно лучше
-
-// Большое количество параметров лучше передвать в метод или в конструктор через деструктуризацию.
-
-// Например в коде:
-// ~~~
-// const newClass = new Class({ windowOne, userForm, popupObj })
-// ~~~
-// А внутри класса:
-// ~~~
-// constructor ({ userForm, popupObj, windowOne }) {...}
-// ~~~
-// И тогда порядок аргументов будет неважен, это удобно
